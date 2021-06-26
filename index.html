@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .grid {
+      height: 100%;
+      width: 100%;
+      max-width: 1920px;
+
+      padding: 15px;
+      box-sizing: border-box;
+      
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .grid .item1, .grid .item2, .grid .item3 {
+      border-radius: 6px;
+      border: 1px solid #d6d6d6;
+      box-shadow: 3px 3px 7px 2px #d6d6d6;
+    }
+
+    .grid .item1 {
+      background-color: blue;
+      grid-row: span 2;
+    }
+
+    .grid .item2 {
+      background: linear-gradient(90deg, green 0%, yellow 100%);
+    }
+
+    .grid .item3 {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('./background3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .grid .item3 p {
+      margin: 0;
+      width: 100%;
+      max-width: 500px;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, .3);
+      backdrop-filter: blur(3px);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+
+    <div class="grid">
+
+      <div class="item1"></div>
+  
+      <div class="item2"></div>
+  
+      <div class="item3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Atque deserunt quam cupiditate numquam expedita nobis minima, aliquam asperiores? 
+          Nesciunt in doloribus ullam distinctio! 
+          Voluptatibus dolorem possimus, maxime eos sunt a!
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
